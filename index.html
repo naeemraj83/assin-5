@@ -6,6 +6,15 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>assin-5</title>
+    <style>
+      li{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+      }
+
+
+    </style>
 </head>
 <body>
     
@@ -35,7 +44,7 @@
               </ul>
             </div>
             <div class="navbar-end">
-              <a class="btn text-green-400 bg-green-100 border-green-400">Bus <span><img src="photos/images/bus-icon.png" alt=""></span></a>
+              <a href="#tickit" class="btn text-green-400 bg-green-100 border-green-400">Bus <span><img src="photos/images/bus-icon.png" alt=""></span></a>
             </div>
           </div>
     </section>
@@ -50,7 +59,8 @@
     <h2 class="font-bold text-5xl text-green-500 pt-4">P Paribahan</h2>
     <p class="w-9/12 m-auto pt-3 text-white">Yes, you can run unit tests and view the results directly within the app. The
         integrated testing features allow for a streamlined .</p>
-        <butto class="btn border-none bg-green-400 mt-6 font-bold">Buy Tickets
+        <butto class="btn border-none bg-green-400 mt-6 font-bold">
+          <a href="#tickit">Buy Tickets</a>
         </butto>
   </div>
   
@@ -115,6 +125,7 @@
 
             <section class="flex gap-32 mt-8  ml-60 rounded-lg bg-slate-50 p-7 w-8/12">
       <div class="">
+        <div class="flex gap-24">
         <div class="flex gap-2">
             <div>
                 <img class="mt-2" src="photos/images/bus-logo.png" alt="">
@@ -125,6 +136,11 @@
                  <p class="text-gray-500">Coach-009-WEB ! AC_Business</p>
             </div>
         </div>
+        <div>
+          <button class="btn bg-green-100 text-green-500"><span><img src="photos/images/seat-green.png" alt=""></span><p id="m-count">8</p> Seats left</button>
+        </div>
+      </div>
+
 
         <div class=" p-4 rounded-md bg-gray-100 mt-3">
 
@@ -160,7 +176,7 @@
 
                 </section>
 
-            <section class="flex mt-5 ml-14 bg-red-50 p-14 rounded-xl w-11/12">
+            <section id="tickit" class="flex mt-5 ml-14 bg-red-50 p-14 rounded-xl w-11/12">
         
                 <section class="border-r-2 border-dashed pr-4  ">
                
@@ -172,7 +188,7 @@
                 </div>
                 
                     <div class="flex gap-1">
-                        <img src="photos/images/seat-green.png" alt="">
+                        <img src="photos/images/seat-green-filled.png" alt="">
                     <p class="text-green-500 font-medium">Selected</p>
                     </div>
 
@@ -183,13 +199,13 @@
                <div class="flex gap-24">
              <div class="flex gap-5">
                 <p>A</p>
-         <button class="btn pr-8 pl-8">A1</button>
-         <button class="btn pr-8 pl-8">A2</button>
+         <button id="btn-a" class="btn pr-8 pl-8 add-btn">A1</button>
+         <button id="btn-a" class="btn pr-8 pl-8 add-btn">A2</button>
              </div>
 
              <div class="flex gap-5">
-           <button class="btn pr-8 pl-8">A3</button>
-           <button class="btn pr-8 pl-8">A4</button>
+           <button class="btn pr-8 pl-8 add-btn">A3</button>
+           <button class="btn pr-8 pl-8 add-btn">A4</button>
              </div>
 
                </div><br>
@@ -197,13 +213,13 @@
                <div class="flex gap-24">
                 <div class="flex gap-5">
                    <p>B</p>
-            <button class="btn pr-8 pl-8">B1</button>
-            <button class="btn pr-8 pl-8">B2</button>
+            <button class="btn pr-8 pl-8 add-btn">B1</button>
+            <button class="btn pr-8 pl-8 add-btn">B2</button>
                 </div>
    
                 <div class="flex gap-5">
-              <button class="btn pr-8 pl-8">B3</button>
-              <button class="btn pr-8 pl-8">B4</button>
+              <button class="btn pr-8 pl-8 add-btn">B3</button>
+              <button class="btn pr-8 pl-8 add-btn">B4</button>
                 </div>
    
                   </div>
@@ -217,15 +233,39 @@
               <h2 class=" border-b-2 border-dashed pb-3 font-medium text-2xl"> Select Your Seat</h2>
         <div class="rounded-md bg-slate-100 p-6 mt-4">
 
-              <div class="flex gap-24 ">
-            <div class="font-medium">Seat</div>
+              <div class="flex justify-around ">
+            <div class="font-medium">Seat <span id="n-count" class=" border rounded-md bg-green-300 text-white  pl-1 pr-1">0</span></div>
             <div class="font-medium">Class</div>
             <div class="font-medium">Price</div>
               </div>
+              <!-- <div class="flex justify-around">
+                <div id="location"></div>
+                <div id="location1"></div>
+                <div id="location2"></div>
+              </div> <br>
+              <div class="flex justify-around">
+                <div id="location3"></div>
+                <div id="location4"></div>
+                <div id="location5"></div>
+              </div> -->
+
+
+              <div id="data-all" class=" ">
+                <ul class="flex">
+                <li id="name-1" class="flex ">
+                  
+                  
+                  
+                </li>
+              </ul>
+
+
+              </div>
+
               <div class="flex border-t-2 border-solid gap-28 mt-3 mb-3">
                 <div><p class="font-medium">Total Price
                 </p></div>
-                <div><p class="font-medium">BDT</p></div>
+                <div><p class="font-medium">BDT <span id="t-price">0</span></p></div>
               </div>
               
             <div>
@@ -237,7 +277,7 @@
             <div class="flex gap-28 mt-3">
               <div><p class="font-medium">Grand Total
               </p></div>
-              <div><p class="font-medium">BDT</p></div>
+              <div><p class="font-medium">BDT <span id="g-price">0</span></p></div>
             </div>
 
           </div>
