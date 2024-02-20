@@ -68,7 +68,7 @@ li.appendChild(p);
 li.appendChild(p2);
 li.appendChild(p3);
 dataAll.appendChild(li);
-/
+
    });
     
 }
