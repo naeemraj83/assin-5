@@ -33,24 +33,24 @@ console.log('done');
 const allBtn = document.getElementsByClassName('add-btn');
 // console.log(buttons);
 let count = 0;
-// let countR = 0;
-let totalPrice = 0;
+
 
 for (const button of allBtn) {
    button.addEventListener('click', function(e){
   count = count + 1;
   counts  = count - 8;
-  totalPrices = totalPrice + 550;
+  
 
   setText( 'n-count',count);
 setText('m-count', counts);
-setText('t-price',totalPrice);
+
 
 // const sitName = e.target.parentNode.childNodes[3].innerText ;
+const sitName = e.target.parentNode.childNodes[1].innerText ;
 
 
 // console.log(e.target.parentNode.parentNode);
-console.log(e.target.parentNode.childNodes[3,5].innerText);
+// console.log(e.target.parentNode.childNodes[1].innerText );
 
 
 
@@ -58,7 +58,9 @@ const dataAll=document.getElementById('data-all');
 
 const li = document.createElement('li');
 const p = document.createElement('p');
-p.innerText = 'sitName';
+p.innerText = sitName ;
+// p.innerText = sitNameS ;
+
 const p2 = document.createElement('p');
 p2.innerText= 'AcBus';
 const p3 = document.createElement('p');
@@ -68,6 +70,17 @@ li.appendChild(p);
 li.appendChild(p2);
 li.appendChild(p3);
 dataAll.appendChild(li);
+
+const totalAmmount = document.getElementById('t-price').innerText;
+const convert = parseInt(totalAmmount);
+// const taka = document.get
+// console.log(convert + parseInt(p3.innerText) )
+
+const sum = convert + parseInt(p3.innerText);
+document.getElementById('t-price').innerText = sum ;
+
+
+
 
    });
     
