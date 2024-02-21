@@ -63,15 +63,6 @@ function setText(id, value){
     document.getElementById(id).innerText = value;
 }
 
-function hide(){
-  const homeSec =document.getElementById('home');
-  // console.log(homeSec.classList);
-  homeSec.classList.add('hidden');
-
-  const hiddenSec =document.getElementById('model');
-  hiddenSec.classList.remove('hidden');
-
-}
 
 
 
